@@ -5,9 +5,6 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-// Example for Ticket code:
-// 109_92_10_25_1_22_12
-
 namespace TicketEmulator.Utils
 {
     class Ticket
@@ -64,14 +61,11 @@ namespace TicketEmulator.Utils
             int.TryParse(arrayStrings[0], out LineID);
             int.TryParse(arrayStrings[1], out Bus_stopID);
             int.TryParse(arrayStrings[2], out VehicleID);
-            LineID = Int32.Parse(arrayStrings[0]);
-            Bus_stopID = Int32.Parse(arrayStrings[1]);
-            VehicleID = Int32.Parse(arrayStrings[2]);
-            Day = Int32.Parse(arrayStrings[3]);
-            Month = Int32.Parse(arrayStrings[4]);
-            Hour = Int32.Parse(arrayStrings[5]);
-            Minute = Int32.Parse(arrayStrings[6]);
-            TicketTimeType = Int32.Parse(arrayStrings[7]);
+            int.TryParse(arrayStrings[3], out Day);
+            int.TryParse(arrayStrings[4], out Month);
+            int.TryParse(arrayStrings[5], out Hour);
+            int.TryParse(arrayStrings[6], out Minute);
+            int.TryParse(arrayStrings[7], out TicketTimeType);
             TicketAgeType = arrayStrings[8];
         }
     }
